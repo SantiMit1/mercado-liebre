@@ -264,6 +264,10 @@ form.login-form input[type="date"] {
     padding: 3px;
 }
 
+form.login-form input:focus {
+    font-weight: bold;
+}
+
 form.login-form button {
     background-color: #0044AA;
     color: white;

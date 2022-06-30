@@ -25,4 +25,4 @@ app.get('/register', (req, res) => res.sendFile(path.join(viewsPath, 'register.h
 app.get('/login', (req, res) => res.sendFile(path.join(viewsPath, 'login.html')));
 
 // Levantamos el servidor con app.listen(port)
-app.listen(port, () => console.log(`Servidor corriendo en el puerto ${port}!`));
+app.listen(process.env.PORT || port, () => console.log(`Servidor corriendo en el puerto ${port}!`));
