@@ -46,7 +46,6 @@ h3,
 
 header{
     background-color: #EAC926;
-    padding-bottom: 30px;
 }
 
 header div.top-header{
@@ -164,9 +163,18 @@ main section h3{
     margin: 20px 0px;
 }
 
-main section article{
+main section article {
     background-color: #FFF;
     margin: 10px 0;
+    transition: box-shadow 600ms;
+}
+
+main section article:hover {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+}
+
+main section article:hover h4 {
+    display: block;
 }
 
 main section article img{
@@ -177,6 +185,7 @@ article div.main-article{
     width: 100%;
     border-top: 1px solid #ebebeb;
     padding: 15px;
+    position: relative;
 }
 
 article div.main-article i{
@@ -189,7 +198,15 @@ article div.main-article i{
     border: 1px solid #39b54a;
     margin-bottom: 5px;
     border-radius: 50%;
+    position: absolute;
+    right: 20px;
+    top: -15px;
+    transition: transform 600ms;
 } 
+
+article div.main-article i:hover {
+    transform: rotate(270deg);
+}
 
 .price-and-discount {
     display: flex;
@@ -221,6 +238,12 @@ footer {
     background-color: white;
 }
 
+/*clase 16 code-review*/
+footer section {
+    display: flex;
+    flex-direction: column;
+}
+
 footer article {
     margin: 40px;
 }
@@ -229,10 +252,15 @@ footer i {
     font-size: 2em;
     margin-bottom: 10px;
     color: #0044AA;
+    transition: color 200ms;
+}
+
+footer i:hover {
+    color: #39b54a;
 }
 
 footer h5 {
-    text-align: left;
+    text-align: center;
     margin-bottom: 15px;
 }
 
@@ -275,6 +303,11 @@ form.login-form button {
     padding: 5px 20px;
     border-radius: 10px;
     margin: 0 12px;
+    transition: background-color 600ms;
+}
+
+form.login-form button:hover {
+    background-color: #0331ea;
 }
 
 /* media query para navegación en tablets */
@@ -364,6 +397,11 @@ form.login-form button {
         margin: 10px auto;
         width: 20%;
     }   
+
+    /*clase 16 code-review*/
+    footer section {
+        flex-direction: row;
+    }
 
     form.login-form input[type="text"],
     form.login-form input[type="password"],
