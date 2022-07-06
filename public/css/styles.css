@@ -52,14 +52,14 @@ header{
 header div.top-header{
     padding: 5%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-wrap: wrap;
 }
 
 header figure.logo{
     padding: 10px;
-    width: 33%;
+    width: 50%;
     max-width: 220px;
 }
 
@@ -69,7 +69,7 @@ header form {
     display: flex;
     justify-content: flex-end;
     align-items: stretch;
-    width: 34%;
+    width: 50%;
     max-width: 280px;
 }
 
@@ -279,6 +279,7 @@ form.login-form .form-control {
 }
 
 form.login-form label {
+    text-align: left;
     display: block;
     font-size: 1.1em;
 }
@@ -287,7 +288,7 @@ form.login-form input[type="text"],
 form.login-form input[type="password"],
 form.login-form input[type="email"],
 form.login-form input[type="date"] {
-    width: 80%;
+    width: 100%;
     border-radius: 5px;
     border: none;
     padding: 3px;
@@ -309,6 +310,11 @@ form.login-form button {
 
 form.login-form button:hover {
     background-color: #0331ea;
+}
+
+form.login-form .buttons {
+    display: flex;
+    justify-content: center;
 }
 
 /* media query para navegación en tablets */
@@ -370,7 +376,7 @@ form.login-form button:hover {
     }
 
     form.login-form button {
-        width: 80%;
+        width: 50%;
         border-radius: 5px;
         margin: 10px;
     }
@@ -401,16 +407,21 @@ form.login-form button:hover {
         flex-direction: row;
     }
 
+    form.login-form {
+        width: 60%;
+    }
+
     form.login-form input[type="text"],
     form.login-form input[type="password"],
     form.login-form input[type="email"],
     form.login-form input[type="date"] {
-        width: 40%;
+        width: 100%;
     }
 
     form.login-form button {
-        width: 40%;
+        width: 35%;
         display: block;
         margin: 10px auto;
     }
+
 }
